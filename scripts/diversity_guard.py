@@ -17,20 +17,23 @@ def check_schema(path: pathlib.Path, seen: dict[tuple[str, ...], pathlib.Path]) 
     name_set = tuple(sorted(table_names))
     sub = path.parent.relative_to(ROOT)
     if name_set in seen:
-        errors.append(f"{sub}: duplicate table set {name_set} also used in {seen[name_set]}")
+        other = seen[name_set].parent.relative_to(ROOT)
+        errors.append(f"{sub}: duplicate table set {name_set} also used in {other}")
     else:
         seen[name_set] = path
     for name in table_names:
         if name in FORBIDDEN:
             errors.append(f"{sub}: forbidden table name '{name}'")
     if len(table_names) < 3:
-        errors.append(f"{sub}: too few tables")
-    if text.count("check") < 2:
-        errors.append(f"{sub}: expect at least 2 CHECK constraints")
+        errors.append(f"{sub}: too few tables (found {len(table_names)})")
+    check_count = text.count("check")
+    if check_count < 2:
+        errors.append(f"{sub}: expect at least 2 CHECK constraints (found {check_count})")
     if "unique" not in text:
         errors.append(f"{sub}: missing UNIQUE constraint")
-    if text.count("create index") < 3:
-        errors.append(f"{sub}: need at least 3 indexes")
+    idx_count = text.count("create index")
+    if idx_count < 3:
+        errors.append(f"{sub}: need at least 3 indexes (found {idx_count})")
     return errors
 
 

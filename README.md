@@ -1,7 +1,9 @@
 # SQLGym Text-to-SQL Corpus
 
 A scaffold for generating a 50‑subdomain corpus of realistic, efficiency-aware
-SQLite databases paired with multi-turn text-to-SQL tasks.
+SQLite databases paired with multi-turn text-to-SQL tasks. Guardrails verify
+index usage with `EXPLAIN QUERY PLAN` and rely on SQLite's JSON1 extension for
+portable evidence lookups.
 
 ## Quickstart
 ```bash

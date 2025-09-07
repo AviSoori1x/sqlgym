@@ -42,6 +42,11 @@ def check_file(subdir: pathlib.Path) -> list[str]:
         return errors
     conn = sqlite3.connect(db)
     try:
+        try:
+            conn.execute("SELECT json_extract('{\"a\":1}', '$.a')")
+        except sqlite3.OperationalError:
+            errors.append("SQLite JSON1 not available; install a build with JSON1")
+            return errors
         for fast, slow in pairs:
             fast_plan = conn.execute(f"EXPLAIN QUERY PLAN {fast}").fetchall()
             slow_plan = conn.execute(f"EXPLAIN QUERY PLAN {slow}").fetchall()
