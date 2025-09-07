@@ -1,0 +1,8 @@
+{
+  "asset_thresholds": {
+    "BTC": 100000000,
+    "ETH": 500000000000000000,
+    "USDC": 5000000000
+  },
+  "audit_frequency_days": 30
+}
