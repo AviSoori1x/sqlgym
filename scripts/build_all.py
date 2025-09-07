@@ -22,6 +22,9 @@ def build_sub(top: str, sub: str) -> None:
         run(["python3", str(gen), "--db", f"{subdir}/{sub}_normalized.db", "--out", str(subdir / "schema_normalized.sql")])
     if pop.exists():
         run(["python3", str(pop), "--db", f"{subdir}/{sub}_normalized.db"])
+    evidence_loader = subdir / "evidence_loader.py"
+    if evidence_loader.exists():
+        run(["python3", str(evidence_loader), "--db", f"{subdir}/{sub}_normalized.db"])
     denorm_pop = subdir / "populate_denormalized.py"
     if denorm_pop.exists():
         run(["python3", str(denorm_pop), "--db", f"{subdir}/{sub}_denormalized.db"])

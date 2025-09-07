@@ -1,0 +1,1 @@
+OEE = availability * performance * quality.

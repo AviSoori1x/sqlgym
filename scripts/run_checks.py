@@ -30,7 +30,7 @@ def main() -> None:
             db = subdir / f"{sub}_normalized.db"
             sql_file = subdir / "sanity_checks.sql"
             if not db.exists():
-                errors.append(f"{db} missing; build first")
+                errors.append(f"{subdir}: {db.name} missing; build first")
                 continue
             if sql_file.exists():
                 run_sql(db, sql_file)
