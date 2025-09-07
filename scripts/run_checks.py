@@ -21,6 +21,7 @@ def main() -> None:
     args = parser.parse_args()
 
     domains = parse_domains(ROOT / "domains.yaml")
+    errors = []
     for top, subs in domains.items():
         if args.domain and args.domain != top:
             continue
@@ -28,8 +29,15 @@ def main() -> None:
             subdir = ROOT / top.lower() / sub
             db = subdir / f"{sub}_normalized.db"
             sql_file = subdir / "sanity_checks.sql"
-            if db.exists() and sql_file.exists():
+            if not db.exists():
+                errors.append(f"{db} missing; build first")
+                continue
+            if sql_file.exists():
                 run_sql(db, sql_file)
+    if errors:
+        for e in errors:
+            print(e)
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

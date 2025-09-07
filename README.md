@@ -30,6 +30,15 @@ Example query:
 SELECT COUNT(*) FROM card_transactions WHERE merchant_id=1;
 ```
 
+## Guardrail errors
+Guard scripts expect normalized databases and fast/slow query pairs. If you run
+`make check` before building, you may see errors like `no DB to check; build
+first` or `No fast/slow pairs`. Build datasets locally with
+`make build DOMAIN=<topdomain>` then rerun checks.
+
+SQLite requires foreign keys to be enabled per connection via
+`PRAGMA foreign_keys=ON;` — see the [SQLite docs](https://www.sqlite.org/pragma.html#pragma_foreign_keys).
+
 ## How to Extend
 1. Add a new subdomain under the appropriate top domain in `domains.yaml`.
 2. `make scaffold DOMAIN=<topdomain>` to create stub files.
