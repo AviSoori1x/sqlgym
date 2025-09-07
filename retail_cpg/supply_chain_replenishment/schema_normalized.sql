@@ -28,3 +28,4 @@ CREATE TABLE lead_times (
     sku_id INTEGER PRIMARY KEY REFERENCES skus(id),
     avg_days INTEGER NOT NULL CHECK(avg_days>0)
 );
+CREATE INDEX idx_leadtime_days ON lead_times(avg_days);
