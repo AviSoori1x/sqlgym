@@ -1,0 +1,76 @@
+{
+  "cash_pooling_eligibility": {
+    "minimum_requirements": {
+      "annual_revenue": 50000000,
+      "relationship_duration_months": 12,
+      "minimum_accounts": 3,
+      "kyc_status": "APPROVED"
+    },
+    "risk_restrictions": {
+      "excluded_risk_ratings": ["VERY_HIGH"],
+      "enhanced_monitoring_ratings": ["HIGH"],
+      "approval_required_ratings": ["MEDIUM", "HIGH"]
+    },
+    "account_requirements": {
+      "minimum_balance_per_account": 100000,
+      "maximum_participants_per_pool": 20,
+      "master_account_types": ["CONCENTRATION", "CHECKING"]
+    }
+  },
+  "pooling_setup_rules": {
+    "zero_balance_pools": {
+      "description": "All excess funds swept to master account daily",
+      "minimum_balance_maintained": 0,
+      "sweep_timing": "End of day",
+      "fee_structure": "Fixed monthly fee per participant"
+    },
+    "target_balance_pools": {
+      "description": "Maintain target balance, sweep excess",
+      "target_balance_range": [50000, 10000000],
+      "tolerance_percentage": 0.05,
+      "rebalancing_frequency": "Daily"
+    },
+    "threshold_sweep_pools": {
+      "description": "Sweep when balance exceeds threshold",
+      "minimum_threshold": 100000,
+      "sweep_percentage": 0.90,
+      "monitoring_frequency": "Intraday"
+    }
+  },
+  "operational_parameters": {
+    "sweep_cutoff_times": {
+      "domestic": "15:00",
+      "international": "12:00"
+    },
+    "value_dating": {
+      "same_day_value": true,
+      "weekend_processing": false,
+      "holiday_schedule": "US_FEDERAL"
+    },
+    "limits_and_controls": {
+      "daily_sweep_limit": 100000000,
+      "single_transaction_limit": 50000000,
+      "approval_threshold": 25000000
+    }
+  },
+  "fee_schedule": {
+    "cash_pooling_fees": {
+      "setup_fee": 5000,
+      "monthly_maintenance_per_pool": 500,
+      "per_participant_monthly": 100,
+      "transaction_fee": 0.10
+    },
+    "account_maintenance": {
+      "checking_monthly": 25,
+      "savings_monthly": 10,
+      "money_market_monthly": 50,
+      "concentration_monthly": 100
+    },
+    "transaction_fees": {
+      "wire_domestic": 25,
+      "wire_international": 50,
+      "ach_per_transaction": 0.15,
+      "check_processing": 0.50
+    }
+  }
+}

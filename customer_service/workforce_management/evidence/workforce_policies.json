@@ -1,0 +1,40 @@
+{
+  "policy_name": "Workforce Management Policies",
+  "version": "2.5",
+  "effective_date": "2024-01-01",
+  "overtime_policy": {
+    "daily_threshold_hours": 8,
+    "weekly_threshold_hours": 40,
+    "overtime_rate_multiplier": 1.5,
+    "approval_required_above_hours": 10,
+    "max_consecutive_days": 6
+  },
+  "minimum_staffing": {
+    "SUPPORT": {
+      "MORNING": 30,
+      "AFTERNOON": 40,
+      "EVENING": 20,
+      "NIGHT": 10
+    },
+    "SALES": {
+      "MORNING": 20,
+      "AFTERNOON": 25,
+      "EVENING": 15,
+      "NIGHT": 5
+    },
+    "TECHNICAL": {
+      "ALL_SHIFTS": 15
+    }
+  },
+  "attendance_thresholds": {
+    "acceptable_rate": 95,
+    "warning_rate": 90,
+    "probation_rate": 85,
+    "consecutive_absences_alert": 3
+  },
+  "skill_requirements": {
+    "minimum_skills_per_agent": 2,
+    "certification_renewal_days": 365,
+    "advance_renewal_notice_days": 30
+  }
+}

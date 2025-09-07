@@ -1,0 +1,69 @@
+{
+  "segmentation_rules": {
+    "demographic_segments": {
+      "Young_Professionals": {
+        "age_range": [25, 35],
+        "income_indicators": ["high_aov", "premium_categories"],
+        "behavioral_traits": ["mobile_first", "social_active"]
+      },
+      "Families": {
+        "purchase_patterns": ["bulk_buying", "kid_categories"],
+        "timing_patterns": ["weekend_shopping", "seasonal_peaks"],
+        "channel_preferences": ["store", "online"]
+      }
+    },
+    "value_segments": {
+      "High_Value": {
+        "lifetime_value_threshold": 5000,
+        "recency_score_min": 7,
+        "frequency_score_min": 6
+      },
+      "Frequent_Buyers": {
+        "monthly_transaction_min": 3,
+        "purchase_consistency": 0.8
+      }
+    },
+    "behavioral_segments": {
+      "Omnichannel": {
+        "channel_diversity_min": 3,
+        "cross_channel_consistency": true
+      },
+      "Mobile_First": {
+        "mobile_transaction_percentage": 70,
+        "app_engagement_score": 8
+      }
+    },
+    "lifecycle_segments": {
+      "New_Customers": {
+        "registration_days_max": 90,
+        "onboarding_completion": true
+      },
+      "At_Risk": {
+        "days_since_last_purchase_min": 180,
+        "declining_frequency": true,
+        "engagement_score_max": 3
+      },
+      "Champions": {
+        "recency_score_min": 8,
+        "frequency_score_min": 8,
+        "monetary_score_min": 8
+      }
+    }
+  },
+  "scoring_methodology": {
+    "recency_score": "Days since last purchase (1-10 scale)",
+    "frequency_score": "Transaction frequency (1-10 scale)", 
+    "monetary_score": "Customer lifetime value (1-10 scale)",
+    "engagement_score": "Multi-channel interaction level (1-10 scale)"
+  },
+  "segment_priorities": {
+    "Champions": 10,
+    "High_Value": 10,
+    "At_Risk": 9,
+    "Families": 9,
+    "Omnichannel": 9,
+    "Young_Professionals": 8,
+    "New_Customers": 8,
+    "Frequent_Buyers": 8
+  }
+}

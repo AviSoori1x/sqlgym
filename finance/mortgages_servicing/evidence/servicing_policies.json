@@ -1,0 +1,82 @@
+{
+  "payment_processing": {
+    "grace_period_days": 15,
+    "late_fee_amount": 25.00,
+    "late_fee_threshold_days": 16,
+    "payment_methods": {
+      "auto_debit": {
+        "processing_time": "same_day",
+        "fee": 0
+      },
+      "online_portal": {
+        "processing_time": "same_day",
+        "fee": 0
+      },
+      "phone_payment": {
+        "processing_time": "same_day", 
+        "fee": 10.00
+      },
+      "expedited_payment": {
+        "processing_time": "same_day",
+        "fee": 25.00
+      }
+    }
+  },
+  "escrow_management": {
+    "analysis_frequency": "ANNUAL",
+    "cushion_months": 2,
+    "shortage_payment_options": {
+      "lump_sum": true,
+      "spread_over_12_months": true,
+      "minimum_monthly_increase": 25.00
+    },
+    "surplus_refund_threshold": 50.00,
+    "disbursement_timing": {
+      "property_taxes": "30_days_before_due",
+      "insurance": "10_days_before_due"
+    }
+  },
+  "delinquency_management": {
+    "collection_stages": {
+      "early_stage": {
+        "days_range": [1, 30],
+        "actions": ["automated_reminder", "courtesy_call"],
+        "frequency": "weekly"
+      },
+      "late_stage": {
+        "days_range": [31, 60], 
+        "actions": ["demand_letter", "payment_plan_offer"],
+        "frequency": "bi_weekly"
+      },
+      "default_stage": {
+        "days_range": [61, 90],
+        "actions": ["notice_of_default", "loss_mitigation"],
+        "frequency": "weekly"
+      },
+      "foreclosure_stage": {
+        "days_range": [91, 999],
+        "actions": ["foreclosure_proceedings", "deed_in_lieu"],
+        "frequency": "as_needed"
+      }
+    },
+    "loss_mitigation_options": [
+      "payment_plan",
+      "loan_modification", 
+      "forbearance",
+      "short_sale",
+      "deed_in_lieu"
+    ]
+  },
+  "regulatory_compliance": {
+    "cfpb_requirements": {
+      "error_resolution_days": 60,
+      "information_request_days": 30,
+      "force_placed_insurance_notice_days": 45
+    },
+    "investor_reporting": {
+      "frequency": "monthly",
+      "delinquency_cutoff_day": 15,
+      "cashflow_reporting": true
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "policy_name": "Product Return Policy",
+  "version": "3.2",
+  "effective_date": "2024-01-01",
+  "return_windows": {
+    "ELECTRONICS": 30,
+    "APPAREL": 60,
+    "HOME": 30,
+    "SPORTS": 45,
+    "TOYS": 30,
+    "BEAUTY": 30
+  },
+  "restocking_fees": {
+    "NEW": 0,
+    "LIKE_NEW": 0,
+    "GOOD": 10,
+    "FAIR": 20,
+    "POOR": 30,
+    "DAMAGED": 50
+  },
+  "non_returnable_conditions": [
+    "Final sale items",
+    "Custom/personalized products",
+    "Consumables after opening",
+    "Digital downloads",
+    "Items marked non-returnable"
+  ],
+  "expedited_processing": {
+    "PLATINUM": {
+      "target_days": 3,
+      "free_return_shipping": true,
+      "instant_credit": true
+    },
+    "GOLD": {
+      "target_days": 5,
+      "free_return_shipping": true,
+      "instant_credit": false
+    },
+    "SILVER": {
+      "target_days": 7,
+      "free_return_shipping": false,
+      "instant_credit": false
+    },
+    "BASIC": {
+      "target_days": 10,
+      "free_return_shipping": false,
+      "instant_credit": false
+    }
+  }
+}

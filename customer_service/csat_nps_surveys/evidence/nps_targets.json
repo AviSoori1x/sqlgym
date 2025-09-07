@@ -1,0 +1,22 @@
+{
+  "segment_targets": {
+    "ENTERPRISE": 60,
+    "SMB": 45,
+    "CONSUMER": 35
+  },
+  "industry_benchmarks": {
+    "B2B_SOFTWARE": 41,
+    "RETAIL": 35,
+    "FINANCIAL_SERVICES": 34,
+    "TELECOMMUNICATIONS": 27
+  },
+  "improvement_goals": {
+    "quarterly_increase": 5,
+    "annual_target": 50
+  },
+  "action_thresholds": {
+    "immediate_followup": 3,
+    "management_escalation": 2,
+    "success_celebration": 9
+  }
+}

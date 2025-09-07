@@ -1,0 +1,53 @@
+{
+  "policy_name": "Customer Onboarding Learning Paths",
+  "version": "2.0",
+  "recommended_paths": {
+    "SELF_SERVICE": [
+      "Getting Started",
+      "Platform Overview",
+      "Basic Certification"
+    ],
+    "STANDARD": [
+      "Getting Started",
+      "Platform Overview",
+      "Initial Setup Guide",
+      "Best Practices Workshop",
+      "Basic Certification"
+    ],
+    "PREMIUM": [
+      "Getting Started",
+      "Platform Overview",
+      "Initial Setup Guide",
+      "Best Practices Workshop",
+      "Advanced Analytics",
+      "Professional Certification"
+    ],
+    "WHITE_GLOVE": [
+      "Enterprise Onboarding",
+      "Best Practices Workshop",
+      "Advanced Analytics",
+      "API Integration",
+      "Expert Certification"
+    ]
+  },
+  "time_expectations": {
+    "SELF_SERVICE": {
+      "days_to_productivity": 14,
+      "hours_investment": 10
+    },
+    "STANDARD": {
+      "days_to_productivity": 10,
+      "hours_investment": 20
+    },
+    "PREMIUM": {
+      "days_to_productivity": 7,
+      "hours_investment": 30
+    },
+    "WHITE_GLOVE": {
+      "days_to_productivity": 3,
+      "hours_investment": 40
+    }
+  },
+  "prerequisites_enforcement": true,
+  "expiration_days": 365
+}

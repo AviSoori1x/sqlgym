@@ -1,0 +1,47 @@
+{
+  "budget_allocation": {
+    "allocation_strategy": "PERFORMANCE_BASED",
+    "reallocation_frequency": "WEEKLY",
+    "minimum_budget_per_campaign": 1000,
+    "budget_distribution": {
+      "GOOGLE_ADS": 0.40,
+      "FACEBOOK": 0.25,
+      "INSTAGRAM": 0.15,
+      "AMAZON": 0.10,
+      "LINKEDIN": 0.05,
+      "TWITTER": 0.05
+    },
+    "performance_thresholds": {
+      "min_roas": 2.0,
+      "max_cpa": 50.0,
+      "min_conversion_rate": 0.02
+    }
+  },
+  "bid_optimization": {
+    "auto_bidding_enabled": true,
+    "bid_adjustment_frequency": "DAILY",
+    "max_bid_increase_percent": 20,
+    "max_bid_decrease_percent": 30,
+    "target_metrics": {
+      "SEARCH": "CPA",
+      "DISPLAY": "CPM", 
+      "VIDEO": "CPV",
+      "SHOPPING": "ROAS"
+    }
+  },
+  "attribution_settings": {
+    "default_attribution_model": "TIME_DECAY",
+    "attribution_window_hours": 168,
+    "view_through_window_hours": 24,
+    "cross_device_tracking": true,
+    "data_driven_attribution_threshold": 15000
+  },
+  "campaign_rules": {
+    "pause_if_cpa_exceeds": 75.0,
+    "pause_if_roas_below": 1.5,
+    "increase_budget_if_roas_above": 4.0,
+    "creative_rotation": "OPTIMIZE",
+    "dayparting_enabled": true,
+    "negative_keyword_automation": true
+  }
+}
