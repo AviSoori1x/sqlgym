@@ -4,6 +4,7 @@ CREATE TABLE kb_articles (
     title TEXT NOT NULL,
     content TEXT NOT NULL
 );
+CREATE INDEX idx_article_title ON kb_articles(title);
 CREATE TABLE tags (
     id INTEGER PRIMARY KEY,
     name TEXT NOT NULL UNIQUE
@@ -13,6 +14,7 @@ CREATE TABLE article_tags (
     tag_id INTEGER NOT NULL REFERENCES tags(id),
     PRIMARY KEY(article_id, tag_id)
 );
+CREATE INDEX idx_article_tags_tag ON article_tags(tag_id);
 CREATE TABLE article_views (
     id INTEGER PRIMARY KEY,
     article_id INTEGER NOT NULL REFERENCES kb_articles(id),
