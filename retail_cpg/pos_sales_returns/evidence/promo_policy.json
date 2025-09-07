@@ -1,0 +1,5 @@
+{
+  "stackable_promos": false,
+  "returns_window_days": 30,
+  "promo_types": ["BOGO", "PERCENT_OFF", "LOYALTY_CREDIT"]
+}

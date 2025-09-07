@@ -1,0 +1,1 @@
+-- TODO: add SQL for procurement_supplier_scorecards

@@ -1,0 +1,1 @@
+-- TODO: add SQL for scada_telemetry_timeseries

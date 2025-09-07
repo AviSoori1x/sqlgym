@@ -1,0 +1,55 @@
+Finance:
+  - retail_banking
+  - corporate_banking_cash_mgmt
+  - brokerage_trading
+  - asset_mgmt_fund_accounting
+  - wealth_advisory
+  - consumer_lending_loans_cards
+  - mortgages_servicing
+  - payments_acquiring
+  - treasury_risk
+  - crypto_exchange_custody
+Healthcare:
+  - claims_processing
+  - ehr_encounters_orders
+  - pharmacy_eprescribing
+  - lab_information_system
+  - radiology_pacs_worklist
+  - revenue_cycle_billing_denials
+  - care_management_utilization
+  - population_health_registries
+  - clinical_trials_site_visits_ae
+  - telehealth_scheduling_sessions
+Customer_Service:
+  - contact_center_qa
+  - ticketing_sla
+  - knowledge_base_search
+  - workforce_management
+  - csat_nps_surveys
+  - returns_rma_support
+  - chatbot_deflection
+  - escalations_problem_mgmt
+  - field_service_dispatch
+  - onboarding_customer_training
+Energy_Manufacturing:
+  - power_market_bids_dispatch
+  - grid_outages_maintenance
+  - scada_telemetry_timeseries
+  - production_line_oee
+  - predictive_maintenance_cmms
+  - inventory_bom_work_orders
+  - quality_control_ncr
+  - procurement_supplier_scorecards
+  - hse_incidents
+  - carbon_accounting_emissions
+Retail_CPG:
+  - assortment_catalog
+  - pricing_promotions_lift
+  - pos_sales_returns
+  - loyalty_rewards
+  - supply_chain_replenishment
+  - ecommerce_funnel_ab
+  - merchandising_planograms
+  - marketplace_sellers_compliance
+  - digital_ads_attribution
+  - customer_360_segmentation

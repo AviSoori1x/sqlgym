@@ -1,0 +1,1 @@
+-- TODO: add SQL for quality_control_ncr

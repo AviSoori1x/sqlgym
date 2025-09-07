@@ -1,0 +1,1 @@
+-- TODO: add SQL for consumer_lending_loans_cards
