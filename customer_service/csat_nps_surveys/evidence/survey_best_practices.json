@@ -1,0 +1,41 @@
+{
+  "policy_name": "Customer Survey Best Practices",
+  "version": "2.0",
+  "effective_date": "2024-01-01",
+  "response_time_targets": {
+    "CSAT": 48,
+    "NPS": 72,
+    "CES": 24
+  },
+  "survey_frequency_limits": {
+    "per_customer_per_month": 2,
+    "minimum_days_between": 14
+  },
+  "channel_guidelines": {
+    "EMAIL": {
+      "best_send_times": ["10:00", "14:00"],
+      "avoid_days": ["Monday", "Friday"]
+    },
+    "SMS": {
+      "max_length": 160,
+      "time_window": "09:00-18:00"
+    },
+    "IN_APP": {
+      "trigger_delay_seconds": 5,
+      "max_prompts_per_session": 1
+    }
+  },
+  "scoring_interpretation": {
+    "NPS": {
+      "excellent": ">50",
+      "good": "20-50",
+      "needs_improvement": "<20"
+    },
+    "CSAT": {
+      "target_satisfaction_rate": 85
+    },
+    "CES": {
+      "target_low_effort_rate": 70
+    }
+  }
+}

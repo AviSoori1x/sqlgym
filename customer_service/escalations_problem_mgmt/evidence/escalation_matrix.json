@@ -1,0 +1,42 @@
+{
+  "policy_name": "Issue Escalation Matrix",
+  "version": "3.1",
+  "effective_date": "2024-01-01",
+  "high_value_customer_rules": {
+    "platinum_tier": {
+      "auto_escalate_to": "L2",
+      "max_wait_time_minutes": 30,
+      "dedicated_team": true
+    },
+    "gold_tier": {
+      "auto_escalate_to": "L1",
+      "max_wait_time_minutes": 60,
+      "priority_queue": true
+    }
+  },
+  "severity_rules": {
+    "CRITICAL": {
+      "initial_assignment": "L2",
+      "escalate_if_unresolved_hours": 2,
+      "notify_management": true
+    },
+    "HIGH": {
+      "initial_assignment": "L1",
+      "escalate_if_unresolved_hours": 8,
+      "notify_management": false
+    }
+  },
+  "escalation_paths": {
+    "L1": ["L2", "L3"],
+    "L2": ["L3", "MANAGER"],
+    "L3": ["MANAGER", "DIRECTOR"],
+    "MANAGER": ["DIRECTOR"],
+    "DIRECTOR": []
+  },
+  "auto_escalation_triggers": [
+    "SLA approaching (80%)",
+    "Customer dissatisfaction detected",
+    "Legal/compliance keywords",
+    "Multiple failed resolution attempts"
+  ]
+}

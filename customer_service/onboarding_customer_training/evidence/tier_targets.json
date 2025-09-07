@@ -1,0 +1,34 @@
+{
+  "completion_targets": {
+    "SELF_SERVICE": {
+      "mandatory_completion_days": 30,
+      "overall_completion_rate": 70,
+      "certification_rate": 20
+    },
+    "STANDARD": {
+      "mandatory_completion_days": 21,
+      "overall_completion_rate": 80,
+      "certification_rate": 40
+    },
+    "PREMIUM": {
+      "mandatory_completion_days": 14,
+      "overall_completion_rate": 90,
+      "certification_rate": 60
+    },
+    "WHITE_GLOVE": {
+      "mandatory_completion_days": 7,
+      "overall_completion_rate": 95,
+      "certification_rate": 80
+    }
+  },
+  "engagement_metrics": {
+    "min_monthly_active_rate": 60,
+    "min_quarterly_completion": 1,
+    "satisfaction_target": 4.0
+  },
+  "escalation_triggers": {
+    "days_inactive": 14,
+    "failed_attempts": 3,
+    "low_progress_threshold": 20
+  }
+}

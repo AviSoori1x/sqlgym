@@ -1,0 +1,48 @@
+{
+  "testing_framework": {
+    "minimum_sample_size": 1000,
+    "minimum_test_duration_days": 14,
+    "statistical_significance_threshold": 0.95,
+    "minimum_detectable_effect": 0.05,
+    "power": 0.80
+  },
+  "experiment_design": {
+    "traffic_allocation": {
+      "default_split": 0.5,
+      "ramp_up_strategy": "GRADUAL",
+      "max_traffic_percentage": 0.8
+    },
+    "variant_limits": {
+      "max_variants_per_experiment": 4,
+      "recommended_variants": 2
+    },
+    "exclusion_criteria": [
+      "Bot traffic",
+      "Internal users", 
+      "Users with incomplete profiles"
+    ]
+  },
+  "success_metrics": {
+    "primary_metrics": [
+      "conversion_rate",
+      "revenue_per_visitor",
+      "average_order_value"
+    ],
+    "secondary_metrics": [
+      "bounce_rate",
+      "time_on_site",
+      "pages_per_session"
+    ],
+    "guardrail_metrics": [
+      "page_load_time",
+      "error_rate",
+      "support_tickets"
+    ]
+  },
+  "statistical_methods": {
+    "hypothesis_testing": "FREQUENTIST",
+    "multiple_comparisons_correction": "BONFERRONI",
+    "early_stopping_rules": "ENABLED",
+    "confidence_intervals": true
+  }
+}

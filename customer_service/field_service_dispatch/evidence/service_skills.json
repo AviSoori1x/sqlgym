@@ -1,0 +1,39 @@
+{
+  "skill_requirements": {
+    "INSTALL": {
+      "required": ["installation", "electrical"],
+      "preferred": ["configuration", "testing"],
+      "certification_minimum": "JOURNEYMAN"
+    },
+    "REPAIR": {
+      "required": ["diagnostics", "repair"],
+      "preferred": ["troubleshooting"],
+      "certification_minimum": "APPRENTICE"
+    },
+    "MAINTENANCE": {
+      "required": ["maintenance", "inspection"],
+      "preferred": ["preventive", "cleaning"],
+      "certification_minimum": "APPRENTICE"
+    },
+    "INSPECTION": {
+      "required": ["inspection", "testing"],
+      "preferred": ["certification", "compliance"],
+      "certification_minimum": "JOURNEYMAN"
+    },
+    "EMERGENCY": {
+      "required": ["emergency", "repair"],
+      "preferred": ["diagnostics", "critical"],
+      "certification_minimum": "JOURNEYMAN"
+    }
+  },
+  "skill_training_hours": {
+    "installation": 40,
+    "electrical": 80,
+    "diagnostics": 60,
+    "repair": 40,
+    "maintenance": 20,
+    "inspection": 30,
+    "testing": 40,
+    "emergency": 100
+  }
+}

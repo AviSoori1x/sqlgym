@@ -1,0 +1,72 @@
+{
+  "underwriting_guidelines": {
+    "personal_loan_guidelines": {
+      "min_credit_score": 660,
+      "max_debt_to_income_ratio": 0.40,
+      "min_income": 30000,
+      "employment_verification_required": true,
+      "max_loan_amount": 50000,
+      "interest_rate_matrix": {
+        "740+": [5.99, 12.99],
+        "680-739": [8.99, 16.99],
+        "660-679": [12.99, 19.99]
+      }
+    },
+    "auto_loan_guidelines": {
+      "min_credit_score": 620,
+      "max_loan_to_value": 1.20,
+      "max_term_months": 84,
+      "required_insurance": true,
+      "interest_rate_matrix": {
+        "740+": [3.99, 8.99],
+        "680-739": [6.99, 12.99],
+        "620-679": [9.99, 15.99]
+      }
+    },
+    "student_loan_guidelines": {
+      "min_credit_score": 600,
+      "school_verification_required": true,
+      "max_annual_amount": 20000,
+      "grace_period_months": 6,
+      "interest_rate_matrix": {
+        "720+": [2.75, 5.50],
+        "660-719": [4.50, 6.50],
+        "600-659": [5.50, 7.50]
+      }
+    }
+  },
+  "credit_policy": {
+    "credit_limit_matrix": {
+      "REWARDS": {
+        "740+": [5000, 25000],
+        "680-739": [2000, 15000],
+        "620-679": [1000, 8000]
+      },
+      "CASHBACK": {
+        "740+": [3000, 20000],
+        "680-739": [1500, 12000],
+        "620-679": [500, 5000]
+      },
+      "SECURED": {
+        "ANY": [200, 5000]
+      }
+    },
+    "utilization_monitoring": {
+      "warning_threshold": 0.75,
+      "limit_increase_threshold": 0.30,
+      "overlimit_fee": 35.00
+    }
+  },
+  "risk_management": {
+    "delinquency_thresholds": {
+      "early_intervention": 15,
+      "collections_referral": 60,
+      "charge_off_consideration": 120
+    },
+    "portfolio_limits": {
+      "max_exposure_per_customer": 250000,
+      "max_unsecured_exposure": 100000,
+      "concentration_limit_by_state": 0.15
+    }
+  }
+}

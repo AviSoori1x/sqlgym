@@ -1,0 +1,28 @@
+{
+  "policy_name": "Chatbot Deflection Standards",
+  "effective_date": "2024-01-01",
+  "target_deflection_rate": 70,
+  "channel_targets": {
+    "WEB": 75,
+    "MOBILE": 72,
+    "SMS": 65,
+    "VOICE": 60
+  },
+  "escalation_thresholds": {
+    "confidence_minimum": 0.7,
+    "max_messages_before_escalation": 10,
+    "sentiment_threshold": -0.5
+  },
+  "priority_intents": [
+    "Fraud Alert",
+    "Account Locked",
+    "Payment Failed",
+    "Service Outage",
+    "Technical Support"
+  ],
+  "satisfaction_targets": {
+    "deflected_minimum": 4.0,
+    "escalated_minimum": 3.5,
+    "overall_minimum": 3.8
+  }
+}

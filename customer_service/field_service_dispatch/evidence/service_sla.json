@@ -1,0 +1,30 @@
+{
+  "policy_name": "Field Service Level Agreement",
+  "version": "1.5",
+  "response_times": {
+    "EMERGENCY": {
+      "target_hours": 4,
+      "maximum_hours": 8
+    },
+    "HIGH": {
+      "target_hours": 24,
+      "maximum_hours": 48
+    },
+    "MEDIUM": {
+      "target_hours": 72,
+      "maximum_hours": 120
+    },
+    "LOW": {
+      "target_hours": 168,
+      "maximum_hours": 336
+    }
+  },
+  "service_level_modifiers": {
+    "VIP": 0.5,
+    "PRIORITY": 0.75,
+    "STANDARD": 1.0
+  },
+  "on_time_arrival_window_minutes": 30,
+  "minimum_job_spacing_minutes": 30,
+  "travel_time_buffer_percentage": 20
+}

@@ -1,0 +1,96 @@
+{
+  "denial_codes": {
+    "11": {
+      "description": "Service not covered under plan",
+      "category": "COVERAGE",
+      "appealable": true,
+      "common_causes": ["Out of network provider", "Excluded service", "Benefit exhausted"]
+    },
+    "16": {
+      "description": "Prior authorization required",
+      "category": "AUTHORIZATION", 
+      "appealable": true,
+      "common_causes": ["Missing prior auth", "Expired authorization", "Exceeded authorized units"]
+    },
+    "18": {
+      "description": "Duplicate claim submission",
+      "category": "DUPLICATE",
+      "appealable": false,
+      "common_causes": ["Resubmitted claim", "Multiple submissions", "Billing system error"]
+    },
+    "29": {
+      "description": "Claim submitted after filing deadline",
+      "category": "TIMELY_FILING",
+      "appealable": true,
+      "common_causes": ["Late submission", "Provider delay", "System downtime"]
+    },
+    "96": {
+      "description": "Invalid procedure code",
+      "category": "CODING",
+      "appealable": true,
+      "common_causes": ["Incorrect CPT code", "Missing modifier", "Code not covered"]
+    },
+    "97": {
+      "description": "Invalid diagnosis code",
+      "category": "CODING",
+      "appealable": true,
+      "common_causes": ["Incorrect ICD-10", "Missing diagnosis", "Code combination invalid"]
+    }
+  },
+  "specialty_coverage_criteria": {
+    "Cardiology": {
+      "prior_auth_required": ["93458", "93459", "93460"],
+      "coverage_limits": {"93000": 1, "93005": 1},
+      "medical_necessity_codes": ["I25.10", "I21.9"]
+    },
+    "Orthopedics": {
+      "prior_auth_required": ["27447", "29881", "63030"],
+      "coverage_limits": {"97110": 12, "97112": 12},
+      "medical_necessity_codes": ["M17.11", "M23.91"]
+    },
+    "Radiology": {
+      "prior_auth_required": ["70551", "72148", "74177"],
+      "coverage_limits": {"71020": 2, "73060": 2},
+      "medical_necessity_codes": ["R06.02", "M25.50"]
+    }
+  },
+  "auto_adjudication_rules": {
+    "criteria": {
+      "clean_claim_requirements": [
+        "Valid member ID",
+        "Valid provider NPI", 
+        "Valid procedure codes",
+        "Valid diagnosis codes",
+        "Within filing deadline"
+      ],
+      "auto_approve_thresholds": {
+        "max_claim_amount": 1000,
+        "routine_procedures_only": true,
+        "in_network_providers_only": true
+      },
+      "auto_deny_triggers": [
+        "Duplicate claim detection",
+        "Invalid member status",
+        "Out of network without authorization",
+        "Excluded service codes"
+      ]
+    },
+    "processing_targets": {
+      "auto_adjudication_rate": 0.75,
+      "avg_processing_time_hours": 4,
+      "same_day_processing_rate": 0.90
+    }
+  },
+  "appeals_process": {
+    "filing_deadlines": {
+      "first_level_appeal_days": 60,
+      "second_level_appeal_days": 30,
+      "external_review_days": 60
+    },
+    "review_timeframes": {
+      "standard_appeal_days": 30,
+      "expedited_appeal_days": 3,
+      "external_review_days": 45
+    }
+  }
+}
