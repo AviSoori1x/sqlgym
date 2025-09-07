@@ -38,3 +38,21 @@ JOIN chargebacks cb ON cb.card_transaction_id=b.id GROUP BY b.merchant_id;
 -- depends: cb
 SELECT merchant_id, cb_amt FROM cb WHERE cb_amt>10000;
 ```
+
+## Task: fund nav workflow
+```sql
+-- step: base
+CREATE TEMP TABLE base AS
+SELECT h.fund_id, s.type, h.quantity FROM holdings h JOIN securities s ON h.security_id=s.id;
+```
+```sql
+-- step: nav
+-- depends: base
+CREATE TEMP TABLE nav AS
+SELECT fund_id, SUM(quantity) nav_qty FROM base GROUP BY fund_id;
+```
+```sql
+-- step: final
+-- depends: nav
+SELECT * FROM nav WHERE nav_qty>1000;
+```
