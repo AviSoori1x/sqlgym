@@ -1,20 +1,13 @@
 # Sample Tasks for claims_processing
 
-## Task 1: open claims
-**User**: List open claims for plan 1.
-**Assistant**: Filter claims by plan and status.
-```sql
-SELECT id FROM claims WHERE plan_id=1 AND status='OPEN';
-```
-
-## Task 2: evidence coding
+## Task 1: evidence coding
 **User**: Where are coding guidelines?
 **Assistant**: Read coding_guidelines.md via evidence_kv.
 ```sql
 SELECT json_extract((SELECT value FROM evidence_kv WHERE key='coding_guidelines'), '$');
 ```
 
-## Task 3: efficiency claim lookup
+## Task 2: efficiency claim lookup
 **User**: Claims for patient 2 on 2024-02-01.
 **Assistant**: Fast uses index.
 ```sql fast
