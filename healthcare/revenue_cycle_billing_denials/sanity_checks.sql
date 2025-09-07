@@ -1,1 +1,2 @@
--- TODO: add SQL for revenue_cycle_billing_denials
+-- bill item totals
+SELECT bill_id, SUM(amount) FROM bill_items GROUP BY bill_id;

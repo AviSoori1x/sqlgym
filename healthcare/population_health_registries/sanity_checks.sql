@@ -1,1 +1,2 @@
--- TODO: add SQL for population_health_registries
+-- registry enrollment counts
+SELECT registry_id, COUNT(*) FROM enrollments GROUP BY registry_id;

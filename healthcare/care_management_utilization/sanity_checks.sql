@@ -1,1 +1,2 @@
--- TODO: add SQL for care_management_utilization
+-- program enrollment counts
+SELECT program_id, COUNT(*) FROM enrollments GROUP BY program_id;

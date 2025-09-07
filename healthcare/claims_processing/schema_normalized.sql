@@ -5,7 +5,7 @@ CREATE TABLE patients (
 );
 CREATE TABLE payer_plans (
     id INTEGER PRIMARY KEY,
-    name TEXT NOT NULL
+    name TEXT NOT NULL UNIQUE
 );
 CREATE TABLE claims (
     id INTEGER PRIMARY KEY,

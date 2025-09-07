@@ -1,7 +1,7 @@
 PRAGMA foreign_keys=ON;
 CREATE TABLE patients (
     id INTEGER PRIMARY KEY,
-    name TEXT NOT NULL
+    name TEXT NOT NULL UNIQUE
 );
 CREATE TABLE encounters (
     id INTEGER PRIMARY KEY,

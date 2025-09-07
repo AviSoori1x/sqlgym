@@ -7,3 +7,4 @@ JOIN patients p ON c.patient_id=p.id
 JOIN claim_lines cl ON cl.claim_id=c.id
 LEFT JOIN adjudications a ON a.claim_line_id=cl.id
 LEFT JOIN denials d ON d.claim_id=c.id;
+CREATE INDEX idx_claim_summary_patient ON claim_summary(patient_name);
