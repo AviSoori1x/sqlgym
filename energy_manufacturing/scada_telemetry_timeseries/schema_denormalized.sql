@@ -1,6 +1,8 @@
 PRAGMA foreign_keys=OFF;
-CREATE TABLE sensor_readings AS
-SELECT r.id AS reading_id, a.name AS asset_name, s.type, r.reading_time, r.value
-FROM readings r
-JOIN sensors s ON r.sensor_id=s.id
-JOIN assets a ON s.asset_id=a.id;
+CREATE TABLE IF NOT EXISTS sensor_daily_avg (
+    day TEXT NOT NULL,
+    sensor_id INTEGER NOT NULL,
+    avg_value REAL NOT NULL,
+    PRIMARY KEY(day, sensor_id)
+);
+CREATE INDEX idx_sda_day ON sensor_daily_avg(day);
