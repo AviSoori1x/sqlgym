@@ -45,7 +45,7 @@ GROUP BY p.id ORDER BY q DESC LIMIT 5;
 
 ## Task 4: evidence promo stackable flag
 **User**: promo_policy.json says stackable_promos is false. Find orders with more than one promo code.
-**Assistant**: Assuming orders table has promo_code column? actually none; report none.
+**Assistant**: Search for comma-separated promo codes; any match violates policy.
 ```sql
 SELECT COUNT(*) FROM orders WHERE instr(promo_code, ',')>0;
 ```

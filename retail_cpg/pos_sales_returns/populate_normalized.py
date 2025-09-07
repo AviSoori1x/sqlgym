@@ -40,7 +40,10 @@ def main() -> None:
         store = rng.randint(1, STORES)
         ordered_at = f"2024-01-{rng.randint(1,3):02d}T10:{rng.randint(0,59):02d}:00"
         status = rng.choice(['PLACED','SHIPPED'])
-        orders.append((order_id, store, ordered_at, status))
+        promo = None
+        if rng.random() < 0.3:
+            promo = rng.choice([f"BOGO-{order_id}", "PERCENT_OFF-10", "LOYALTY_CREDIT"])
+        orders.append((order_id, store, ordered_at, status, promo))
         for _ in range(rng.randint(1,3)):
             prod = rng.randint(1, PRODUCTS)
             qty = rng.randint(1,5)
@@ -51,7 +54,7 @@ def main() -> None:
                 ret_id += 1
             item_id += 1
         order_id += 1
-    conn.executemany("INSERT INTO orders VALUES (?,?,?,?)", orders)
+    conn.executemany("INSERT INTO orders VALUES (?,?,?,?,?)", orders)
     for chunk in batch(items, 500):
         conn.executemany("INSERT INTO order_items VALUES (?,?,?,?)", chunk)
     if returns:

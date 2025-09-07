@@ -35,7 +35,8 @@ CREATE TABLE IF NOT EXISTS orders (
     id INTEGER PRIMARY KEY,
     store_id INTEGER NOT NULL REFERENCES stores(id),
     ordered_at TEXT NOT NULL,
-    status TEXT NOT NULL CHECK(status IN ('PLACED','SHIPPED','CANCELLED'))
+    status TEXT NOT NULL CHECK(status IN ('PLACED','SHIPPED','CANCELLED')),
+    promo_code TEXT
 );
 CREATE INDEX IF NOT EXISTS idx_orders_store_date ON orders(store_id, ordered_at);
 
