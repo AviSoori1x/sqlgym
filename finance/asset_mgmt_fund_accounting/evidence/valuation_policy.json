@@ -1,0 +1,5 @@
+{
+  "nav_method": "market",
+  "valuation_time": "16:00 UTC",
+  "allowed_asset_types": ["EQUITY", "BOND", "CASH"]
+}
