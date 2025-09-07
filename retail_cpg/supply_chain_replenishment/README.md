@@ -20,3 +20,7 @@ Models stock levels and replenishment orders to maintain inventory.
 
 ## Efficiency Notes
 Indexes support fast lookups for reorder analysis.
+
+## Denormalized Mart Trade-offs
+The stock and order mart repeats store and SKU attributes for quick dashboarding
+but requires regeneration when upstream details change.

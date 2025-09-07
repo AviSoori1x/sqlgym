@@ -31,3 +31,7 @@ Expected rows: ~200 stores, 5k products, 50k orders, 150k items, 5k returns.
 ## Efficiency Notes
 Indexes support lookups by store/date and product popularity; sample tasks
 contrast date-first vs full-scan approaches.
+
+## Denormalized Mart Trade-offs
+The `store_daily_sales` mart pre-aggregates revenue and returns for faster reporting
+but duplicates figures from orders; late adjustments require recomputation.

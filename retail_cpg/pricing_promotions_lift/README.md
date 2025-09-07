@@ -20,3 +20,7 @@ Analyzes effect of promotions on sales lift across product categories.
 
 ## Efficiency Notes
 Indexes support receipt lookups by product and date.
+
+## Denormalized Mart Trade-offs
+The `receipt_promos` mart flattens product and promotion details for analysis but
+stores redundant product names and promo codes, increasing storage and rebuild cost.
