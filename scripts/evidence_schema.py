@@ -31,6 +31,8 @@ def check_sub(subdir: pathlib.Path) -> list[str]:
                 json.loads(ev.read_text(encoding="utf-8"))
             except json.JSONDecodeError:
                 errors.append(f"Invalid JSON in {ev}")
+        elif ev.suffix == ".md" and not ev.read_text(encoding="utf-8").strip():
+            errors.append(f"Empty markdown evidence {ev}")
     return errors
 
 

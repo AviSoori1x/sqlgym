@@ -31,7 +31,7 @@ def check_file(subdir: pathlib.Path) -> list[str]:
     db = subdir / f"{subdir.name}_normalized.db"
     tasks_file = subdir / "sample_text_to_sql_tasks.md"
     if not db.exists():
-        errors.append(f"{db} missing; no DB to check; build first")
+        errors.append(f"{db} missing; build first")
         return errors
     if not tasks_file.exists():
         errors.append(f"Missing tasks file {tasks_file}")

@@ -6,11 +6,16 @@ SQLite databases paired with multi-turn text-to-SQL tasks.
 ## Quickstart
 ```bash
 make scaffold   # create subdomain folders from domains.yaml
-make build      # generate schemas and populate data (disabled in this repo)
+make build      # generate schemas and populate data
 make check      # run sanity checks and guardrails
 python3 scripts/index_dbs.py  # index built datasets
 ```
 Use `DOMAIN=<topdomain>` to limit `build` or `check` to a top-level domain.
+
+### Prereqs
+Efficiency guards rely on `EXPLAIN QUERY PLAN` against built SQLite databases
+and the JSON1 extension for evidence queries. Ensure your SQLite build includes
+JSON1 and run `make build` locally before invoking guards.
 
 ## Consumers' Guide
 After building locally:
@@ -32,9 +37,9 @@ SELECT COUNT(*) FROM card_transactions WHERE merchant_id=1;
 
 ## Guardrail errors
 Guard scripts expect normalized databases and fast/slow query pairs. If you run
-`make check` before building, you may see errors like `no DB to check; build
-first` or `No fast/slow pairs`. Build datasets locally with
-`make build DOMAIN=<topdomain>` then rerun checks.
+`make check` before building, you may see errors like `missing db; build first`
+or `No fast/slow pairs`. Efficiency checks will fail until you build local
+databases via `make build DOMAIN=<topdomain>` then rerun checks.
 
 SQLite requires foreign keys to be enabled per connection via
 `PRAGMA foreign_keys=ON;` — see the [SQLite docs](https://www.sqlite.org/pragma.html#pragma_foreign_keys).
