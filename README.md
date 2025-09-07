@@ -38,8 +38,9 @@ SELECT COUNT(*) FROM card_transactions WHERE merchant_id=1;
 ```
 
 ## Guardrail errors
+Run `make build` before `make check` or use `DOMAIN=<topdomain>` to limit checks.
 Guard scripts expect normalized databases and fast/slow query pairs. If you run
-`make check` before building, you may see errors like `missing db; build first`
+`make check` without building, you may see errors like `missing db; build first`
 or `No fast/slow pairs`. Efficiency checks will fail until you build local
 databases via `make build DOMAIN=<topdomain>` then rerun checks.
 

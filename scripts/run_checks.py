@@ -6,7 +6,7 @@ import pathlib
 import sqlite3
 import subprocess
 
-from scaffold import parse_domains  # type: ignore
+from scripts.scaffold import parse_domains
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
