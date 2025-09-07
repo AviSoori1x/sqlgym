@@ -72,7 +72,7 @@ SELECT items.store_id, rc*1.0/c FROM items LEFT JOIN r USING(store_id) ORDER BY 
 **User**: What promo types are listed in promo_policy.json?
 **Assistant**: The file enumerates types; select them via json_each.
 ```sql
-SELECT value FROM json_each(readfile('evidence/promo_policy.json'), '$.promo_types');
+SELECT value FROM json_each((SELECT value FROM evidence_kv WHERE key='promo_policy'), '$.promo_types');
 ```
 
 ## Task 7: efficiency pair on date filtering

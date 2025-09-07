@@ -1,3 +1,5 @@
 # retail_banking
 
-TODO: document entities, indexes and efficiency notes.
+Transactional schema for basic retail bank accounts, capturing customers,
+branches, accounts and daily transactions. Indexes target common lookups by
+customer and date. Transactions enforce status enums and account types.

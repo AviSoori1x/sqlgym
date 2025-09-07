@@ -1,3 +1,4 @@
 # ticketing_sla
 
-TODO: document entities, indexes and efficiency notes.
+Tracks customer service tickets, interactions and SLA commitments. Indexes help
+query tickets by status and opened date.

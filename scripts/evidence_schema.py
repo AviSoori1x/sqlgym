@@ -16,8 +16,13 @@ def check_sub(subdir: pathlib.Path) -> list[str]:
     if not tasks.exists():
         return errors
     text = tasks.read_text(encoding="utf-8")
-    for match in EVIDENCE_RE.findall(text):
-        ev = subdir / "evidence" / match
+    matches = EVIDENCE_RE.findall(text)
+    evidence_dir = subdir / "evidence"
+    if matches and (not evidence_dir.exists() or not any(evidence_dir.iterdir())):
+        errors.append(f"{subdir} references evidence but evidence/ missing or empty")
+        return errors
+    for match in matches:
+        ev = evidence_dir / match
         if not ev.exists():
             errors.append(f"Missing evidence file {ev}")
             continue
