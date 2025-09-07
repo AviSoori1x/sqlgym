@@ -2,8 +2,10 @@ PRAGMA foreign_keys=ON;
 CREATE TABLE conversations (
     id INTEGER PRIMARY KEY,
     customer_id INTEGER NOT NULL,
-    started_at TEXT NOT NULL
+    started_at TEXT NOT NULL,
+    UNIQUE(customer_id, started_at)
 );
+CREATE INDEX idx_conv_customer ON conversations(customer_id);
 CREATE TABLE intents (
     id INTEGER PRIMARY KEY,
     name TEXT NOT NULL UNIQUE
@@ -17,6 +19,7 @@ CREATE TABLE turns (
     ts TEXT NOT NULL
 );
 CREATE INDEX idx_turn_conv_time ON turns(conversation_id, ts);
+CREATE INDEX idx_turn_intent ON turns(intent_id);
 CREATE TABLE resolutions (
     id INTEGER PRIMARY KEY,
     conversation_id INTEGER NOT NULL REFERENCES conversations(id),
