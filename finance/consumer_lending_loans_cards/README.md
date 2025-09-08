@@ -1,4 +1,4 @@
-# consumer_lending_loans_cards
+# chase_consumer_banking
 
 ## Overview
 This subdomain models consumer lending operations including personal loans, auto loans, student loans, and credit cards with comprehensive application workflows, payment tracking, and risk management.

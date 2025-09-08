@@ -1,4 +1,4 @@
-# Sample Tasks for population_health_registries
+# Sample Tasks for cdc_health_registries
 
 ## Task 1: enrollment rule
 **User**: What is the registry enrollment policy?

@@ -1,4 +1,4 @@
-# population_health_registries
+# cdc_health_registries
 
 ## Entities
 - patients

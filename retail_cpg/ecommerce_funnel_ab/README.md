@@ -1,4 +1,4 @@
-# ecommerce_funnel_ab
+# shopify_conversion_lab
 
 ## Overview
 This subdomain models ecommerce conversion funnels, A/B testing experiments, and statistical analysis of user behavior optimization.

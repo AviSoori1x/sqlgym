@@ -1,4 +1,4 @@
-# corporate_banking_cash_mgmt
+# jpmorgan_treasury
 
 ## Overview
 This subdomain models corporate banking cash management operations including cash pooling, sweep accounts, liquidity management, and multi-account corporate relationships.

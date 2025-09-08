@@ -1,4 +1,4 @@
-# Sample Tasks for scada_telemetry_timeseries
+# Sample Tasks for siemens_scada_historian
 
 ## Task 1: reading count
 **User**: How many readings does sensor 1 have?

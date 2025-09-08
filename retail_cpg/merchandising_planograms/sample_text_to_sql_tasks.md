@@ -1,3 +1,3 @@
-# Sample Tasks for merchandising_planograms
+# Sample Tasks for walmart_merchandising
 
 <!-- TODO: add multi-turn tasks -->

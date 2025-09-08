@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS funnel_analysis (
     completion_rate REAL NOT NULL,
     avg_time_on_step INTEGER,
     drop_off_rate REAL,
-    PRIMARY KEY(date, COALESCE(experiment_id, 0), COALESCE(variant_id, 0), funnel_step_id)
+    PRIMARY KEY(date, experiment_id, variant_id, funnel_step_id)
 );
 
 CREATE TABLE IF NOT EXISTS cohort_funnel_performance (

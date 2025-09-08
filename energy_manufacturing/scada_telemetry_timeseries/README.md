@@ -1,4 +1,4 @@
-# scada_telemetry_timeseries
+# siemens_scada_historian
 
 ## Entities
 - assets

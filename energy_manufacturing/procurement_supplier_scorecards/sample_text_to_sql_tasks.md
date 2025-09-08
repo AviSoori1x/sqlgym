@@ -1,3 +1,3 @@
-# Sample Tasks for procurement_supplier_scorecards
+# Sample Tasks for caterpillar_procurement
 
 <!-- TODO: add multi-turn tasks -->

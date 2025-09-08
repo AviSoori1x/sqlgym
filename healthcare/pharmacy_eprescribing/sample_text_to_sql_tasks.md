@@ -1,4 +1,4 @@
-# Sample Tasks for pharmacy_eprescribing
+# Sample Tasks for cvs_eprescribe
 
 ## Task 1: transmission rule
 **User**: When must e-prescriptions be sent?

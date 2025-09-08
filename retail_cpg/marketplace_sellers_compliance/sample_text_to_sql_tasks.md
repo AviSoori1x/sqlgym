@@ -1,3 +1,3 @@
-# Sample Tasks for marketplace_sellers_compliance
+# Sample Tasks for amazon_seller_central
 
 <!-- TODO: add multi-turn tasks -->

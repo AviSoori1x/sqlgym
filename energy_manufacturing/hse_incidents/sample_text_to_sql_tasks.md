@@ -1,3 +1,3 @@
-# Sample Tasks for hse_incidents
+# Sample Tasks for chevron_safety_mgmt
 
 <!-- TODO: add multi-turn tasks -->

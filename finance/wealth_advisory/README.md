@@ -1,4 +1,4 @@
-# wealth_advisory
+# morgan_stanley_wealth
 
 ## Overview
 This subdomain models wealth management operations including client portfolios, securities trading, performance attribution, and investment advisory services.

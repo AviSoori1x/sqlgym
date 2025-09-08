@@ -1,4 +1,4 @@
-# Sample Tasks for corporate_banking_cash_mgmt
+# Sample Tasks for jpmorgan_treasury
 
 ## Task 1: Cash Pool Performance Analysis
 **User**: How are our cash pooling structures performing?

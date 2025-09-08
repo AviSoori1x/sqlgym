@@ -1,3 +1,3 @@
-# Sample Tasks for predictive_maintenance_cmms
+# Sample Tasks for ge_predix_maintenance
 
 <!-- TODO: add multi-turn tasks -->

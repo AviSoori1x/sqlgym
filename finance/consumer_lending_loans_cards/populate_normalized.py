@@ -41,11 +41,13 @@ def main() -> None:
             (580, 670): (35000, 75000),
             (670, 740): (60000, 120000),
             (740, 800): (90000, 250000),
-            (800, 850): (150000, 500000)
+            (800, 851): (150000, 500000)  # Fixed: 851 instead of 850 to include 850
         }
-        income = rng.uniform(
-            *[v for k, v in income_levels.items() if k[0] <= credit_score < k[1]][0]
-        )
+        matching_ranges = [v for k, v in income_levels.items() if k[0] <= credit_score < k[1]]
+        if not matching_ranges:
+            # Fallback for edge cases
+            matching_ranges = [(50000, 100000)]
+        income = rng.uniform(*matching_ranges[0])
         
         customers_data.append((
             i, f'CUST{i:05d}', f'Customer', f'{i}',
@@ -75,7 +77,10 @@ def main() -> None:
         cust_id, credit_score = cust[0], cust[6]
         
         for _ in range(rng.randint(1, APPLICATIONS_PER_CUSTOMER)):
-            product = rng.choice([p for p in products_data if p[3] <= credit_score])
+            eligible_products = [p for p in products_data if p[3] <= credit_score]
+            if not eligible_products:
+                continue  # Skip if no eligible products for this credit score
+            product = rng.choice(eligible_products)
             
             # Application
             status = rng.choices(['APPROVED', 'REJECTED', 'PENDING'], [0.6, 0.3, 0.1])[0]

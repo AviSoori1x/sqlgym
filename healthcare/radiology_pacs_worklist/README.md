@@ -1,4 +1,4 @@
-# radiology_pacs_worklist
+# ge_healthcare_pacs
 
 ## Entities
 - patients

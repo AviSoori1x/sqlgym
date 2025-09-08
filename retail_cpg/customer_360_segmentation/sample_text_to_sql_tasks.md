@@ -1,4 +1,4 @@
-# Sample Tasks for customer_360_segmentation
+# Sample Tasks for amazon_customer_insights
 
 ## Task 1: Customer Lifetime Value Analysis
 **User**: What's the average customer lifetime value by acquisition channel?

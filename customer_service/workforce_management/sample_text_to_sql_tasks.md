@@ -1,4 +1,4 @@
-# Sample Tasks for workforce_management
+# Sample Tasks for kronos_scheduling
 
 ## Task 1: Current Staffing Levels
 **User**: How many agents are working today?

@@ -193,8 +193,12 @@ def main() -> None:
         num_transactions = rng.randint(50, TRANSACTIONS_PER_ACCOUNT)
         
         for _ in range(num_transactions):
-            trans_date = opening_date + timedelta(days=rng.randint(0, 
-                min(90, (datetime.now() - opening_date).days)))
+            # Ensure positive date range
+            max_days = max(1, min(90, (datetime.now() - opening_date).days))
+            if max_days <= 0:
+                continue  # Skip if account opened in future
+                
+            trans_date = opening_date + timedelta(days=rng.randint(0, max_days))
             
             if trans_date > datetime.now():
                 continue

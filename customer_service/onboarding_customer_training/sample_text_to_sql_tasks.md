@@ -1,4 +1,4 @@
-# Sample Tasks for onboarding_customer_training
+# Sample Tasks for docusign_onboarding
 
 ## Task 1: Onboarding Completion Status
 **User**: What percentage of customers have completed onboarding?

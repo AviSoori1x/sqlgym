@@ -1,4 +1,4 @@
-# Sample Tasks for digital_ads_attribution
+# Sample Tasks for google_ads_analytics
 
 ## Task 1: Campaign Performance Overview
 **User**: What's the performance of our Google Ads campaigns this month?

@@ -1,3 +1,3 @@
-# Sample Tasks for quality_control_ncr
+# Sample Tasks for toyota_quality_system
 
 <!-- TODO: add multi-turn tasks -->

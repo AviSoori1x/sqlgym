@@ -1,4 +1,4 @@
-# Sample Tasks for telehealth_scheduling_sessions
+# Sample Tasks for teladoc_platform
 
 ## Task 1: join policy
 **User**: What is the join policy for sessions?

@@ -1,4 +1,4 @@
-# Sample Tasks for consumer_lending_loans_cards
+# Sample Tasks for chase_consumer_banking
 
 ## Task 1: Portfolio Risk Analysis
 **User**: What's the current risk profile of our loan portfolio?

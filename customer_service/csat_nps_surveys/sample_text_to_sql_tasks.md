@@ -1,4 +1,4 @@
-# Sample Tasks for csat_nps_surveys
+# Sample Tasks for surveymonkey_feedback
 
 ## Task 1: Overall NPS Score Calculation
 **User**: What's our current NPS score?

@@ -1,3 +1,3 @@
-# Sample Tasks for ecommerce_funnel_ab
+# Sample Tasks for shopify_conversion_lab
 
 <!-- TODO: add multi-turn tasks -->

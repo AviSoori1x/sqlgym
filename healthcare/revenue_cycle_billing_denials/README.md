@@ -1,4 +1,4 @@
-# revenue_cycle_billing_denials
+# cerner_revenue_cycle
 
 ## Entities
 - patients

@@ -1,4 +1,4 @@
-# Sample Tasks for returns_rma_support
+# Sample Tasks for shopify_returns
 
 ## Task 1: Return Rate Overview
 **User**: What's our overall return rate?
