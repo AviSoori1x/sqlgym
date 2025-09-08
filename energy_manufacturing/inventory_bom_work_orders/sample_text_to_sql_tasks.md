@@ -1,3 +1,3 @@
-# Sample Tasks for inventory_bom_work_orders
+# Sample Tasks for boeing_manufacturing
 
 <!-- TODO: add multi-turn tasks -->

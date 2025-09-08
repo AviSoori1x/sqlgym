@@ -150,7 +150,11 @@ def main() -> None:
         
         for _ in range(num_trades):
             security_id = rng.randint(1, SECURITIES)
-            trade_date = inception_date + timedelta(days=rng.randint(0, (datetime.now() - inception_date).days))
+            # Ensure positive date range
+            max_days = max(1, (datetime.now() - inception_date).days)
+            if max_days <= 0:
+                continue  # Skip if portfolio inception is in future
+            trade_date = inception_date + timedelta(days=rng.randint(0, max_days))
             settlement_date = trade_date + timedelta(days=rng.randint(1, 3))
             
             trade_type = rng.choice(['BUY', 'SELL'])

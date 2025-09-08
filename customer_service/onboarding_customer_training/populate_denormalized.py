@@ -9,13 +9,15 @@ from pathlib import Path
 from datetime import datetime, timedelta
 import sys
 sys.path.append(str(Path(__file__).resolve().parents[2]))
-from common.utils import batch
+from common.utils import batch, get_rng
 
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--normalized-db", required=True)
     parser.add_argument("--denormalized-db", required=True)
     args = parser.parse_args()
+    
+    rng = get_rng(42)  # Add missing RNG initialization
     
     norm_conn = sqlite3.connect(args.normalized_db)
     norm_conn.row_factory = sqlite3.Row

@@ -1,4 +1,4 @@
-# telehealth_scheduling_sessions
+# teladoc_platform
 
 ## Entities
 - providers

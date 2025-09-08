@@ -1,4 +1,4 @@
-# clinical_trials_site_visits_ae
+# pfizer_clinical_trials
 
 ## Entities
 - subjects

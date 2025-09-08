@@ -1,4 +1,4 @@
-# returns_rma_support
+# shopify_returns
 
 ## Overview
 This subdomain models product returns, RMA (Return Merchandise Authorization) workflows, inspection processes, and refund management.

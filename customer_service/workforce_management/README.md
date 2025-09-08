@@ -1,4 +1,4 @@
-# workforce_management
+# kronos_scheduling
 
 ## Overview
 This subdomain models agent workforce management including scheduling, skills tracking, time-off management, and performance monitoring.

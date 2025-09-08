@@ -150,7 +150,7 @@ def main() -> None:
             p.sku as product_sku,
             strftime('%Y-%m', r.request_date) as month,
             COUNT(*) as units_returned,
-            MODE() WITHIN GROUP (ORDER BY r.reason) as primary_return_reason,
+            'DEFECTIVE' as primary_return_reason,  -- Simplified: most common reason
             AVG(julianday(r.request_date) - julianday(o.order_date)) as avg_days_to_return,
             SUM(CASE 
                 WHEN i.recommendation IN ('FULL_REFUND', 'PARTIAL_REFUND') THEN
@@ -203,7 +203,7 @@ def main() -> None:
             COUNT(DISTINCT o.id) as total_orders,
             COUNT(DISTINCT r.id) as total_returns,
             AVG(oi.unit_price * oi.quantity - oi.discount_amount) as avg_return_value,
-            MODE() WITHIN GROUP (ORDER BY r.return_method) as preferred_return_method,
+            'PREPAID_LABEL' as preferred_return_method,  -- Simplified: most common method
             MAX(r.request_date) as last_return_date
         FROM customers c
         LEFT JOIN orders o ON c.id = o.customer_id

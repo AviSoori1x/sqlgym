@@ -1,4 +1,4 @@
-# Sample Tasks for chatbot_deflection
+# Sample Tasks for zendesk_ai_support
 
 ## Task 1: Basic Deflection Rate
 **User**: What's our chatbot deflection rate?

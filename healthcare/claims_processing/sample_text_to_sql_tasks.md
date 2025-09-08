@@ -1,4 +1,4 @@
-# Sample Tasks for claims_processing
+# Sample Tasks for anthem_claims_system
 
 ## Task 1: Claims Processing Performance
 **User**: What's our overall claims processing performance this month?

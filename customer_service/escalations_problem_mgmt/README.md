@@ -1,4 +1,4 @@
-# escalations_problem_mgmt
+# servicenow_incidents
 
 ## Overview
 This subdomain models issue escalation hierarchies, problem management workflows, and resolution tracking across support tiers.

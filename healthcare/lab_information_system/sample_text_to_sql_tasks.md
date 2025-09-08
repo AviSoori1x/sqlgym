@@ -1,4 +1,4 @@
-# Sample Tasks for lab_information_system
+# Sample Tasks for labcorp_lis
 
 ## Task 1: specimen policy
 **User**: How soon must specimens be processed?

@@ -1,4 +1,4 @@
-# Sample Tasks for mortgages_servicing
+# Sample Tasks for wells_fargo_home_loans
 
 ## Task 1: Portfolio Delinquency Analysis
 **User**: What's our current delinquency rate?

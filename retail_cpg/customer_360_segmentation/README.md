@@ -1,4 +1,4 @@
-# customer_360_segmentation
+# amazon_customer_insights
 
 ## Overview
 This subdomain models comprehensive customer profiling, behavioral segmentation, and personalization capabilities for retail analytics.

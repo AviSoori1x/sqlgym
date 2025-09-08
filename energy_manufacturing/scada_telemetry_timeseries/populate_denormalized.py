@@ -10,7 +10,7 @@ from pathlib import Path
 def main() -> None:
     p = argparse.ArgumentParser()
     p.add_argument("--db", required=True)
-    p.add_argument("--source", default="scada_telemetry_timeseries_normalized.db")
+    p.add_argument("--source", default="siemens_scada_historian_normalized.db")
     args = p.parse_args()
 
     src = sqlite3.connect(args.source)

@@ -1,4 +1,4 @@
-# Sample Tasks for clinical_trials_site_visits_ae
+# Sample Tasks for pfizer_clinical_trials
 
 ## Task 1: reporting rule
 **User**: What is the AE reporting timeline?

@@ -1,4 +1,4 @@
-# claims_processing
+# anthem_claims_system
 
 ## Overview
 This subdomain models healthcare insurance claims processing including member enrollment, provider networks, claim adjudication, denial management, and prior authorization workflows.

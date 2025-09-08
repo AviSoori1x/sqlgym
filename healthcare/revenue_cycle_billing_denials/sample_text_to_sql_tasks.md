@@ -1,4 +1,4 @@
-# Sample Tasks for revenue_cycle_billing_denials
+# Sample Tasks for cerner_revenue_cycle
 
 ## Task 1: denial policy
 **User**: Why might a claim be denied?

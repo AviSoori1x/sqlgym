@@ -1,4 +1,4 @@
-# Sample Tasks for escalations_problem_mgmt
+# Sample Tasks for servicenow_incidents
 
 ## Task 1: Current Escalation Rate
 **User**: What's our overall escalation rate?

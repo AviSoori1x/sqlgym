@@ -1,4 +1,4 @@
-# Sample Tasks for radiology_pacs_worklist
+# Sample Tasks for ge_healthcare_pacs
 
 ## Task 1: sign-off rule
 **User**: What is the radiologist sign-off guideline?

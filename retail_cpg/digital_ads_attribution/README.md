@@ -1,4 +1,4 @@
-# digital_ads_attribution
+# google_ads_analytics
 
 ## Overview
 This subdomain models digital advertising campaigns, multi-touch attribution, and cross-platform performance tracking for comprehensive marketing analytics.

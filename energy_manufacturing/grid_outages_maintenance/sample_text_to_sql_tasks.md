@@ -1,3 +1,3 @@
-# Sample Tasks for grid_outages_maintenance
+# Sample Tasks for pge_grid_operations
 
 <!-- TODO: add multi-turn tasks -->

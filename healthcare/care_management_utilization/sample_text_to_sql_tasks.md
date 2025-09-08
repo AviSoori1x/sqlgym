@@ -1,4 +1,4 @@
-# Sample Tasks for care_management_utilization
+# Sample Tasks for humana_care_mgmt
 
 ## Task 1: follow-up policy
 **User**: What is the follow-up rule?

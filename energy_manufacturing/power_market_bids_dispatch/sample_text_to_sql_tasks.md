@@ -1,3 +1,3 @@
-# Sample Tasks for power_market_bids_dispatch
+# Sample Tasks for constellation_energy_trading
 
 <!-- TODO: add multi-turn tasks -->

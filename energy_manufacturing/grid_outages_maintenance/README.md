@@ -1,3 +1,3 @@
-# grid_outages_maintenance
+# pge_grid_operations
 
 TODO: document entities, indexes and efficiency notes.

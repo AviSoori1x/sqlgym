@@ -1,4 +1,4 @@
-# chatbot_deflection
+# zendesk_ai_support
 
 ## Overview
 This subdomain models chatbot interactions, intent detection, and escalation patterns for customer service automation.
